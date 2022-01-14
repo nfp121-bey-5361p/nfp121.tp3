@@ -2,6 +2,7 @@ package question2;
 
 import question1.PilePleineException;
 import question1.PileVideException;
+import java.util.Iterator;
 
 import java.util.Stack;
 
@@ -20,7 +21,13 @@ public class Pile2 implements PileI {
      */
     public Pile2(int taille) {
         // prevoir le cas <=0
+        if (taille <= 0)
+            taille = CAPACITE_PAR_DEFAUT;
         // a completer
+        this.capacite = taille;
+        stk = new Stack<Object>();
+        stk.ensureCapacity(taille);
+        
     }
 
     // constructeur fourni
@@ -30,16 +37,23 @@ public class Pile2 implements PileI {
 
     public void empiler(Object o) throws PilePleineException {
         // a completer
+        if (estPleine()) 
+            throw new PilePleineException();
+        stk.push(o);
     }
 
     public Object depiler() throws PileVideException {
         // a completer
-        return null;
+        if (estVide())
+            throw new PileVideException();
+        return stk.pop();
     }
 
     public Object sommet() throws PileVideException {
         // a completer
-        return null;
+        if (estVide())
+            throw new PileVideException();
+        return stk.peek();
     }
 
     /**
@@ -49,7 +63,7 @@ public class Pile2 implements PileI {
      */
     public boolean estVide() {
         // a completer
-        return false;
+        return stk.size() == 0;
     }
 
     /**
@@ -59,7 +73,7 @@ public class Pile2 implements PileI {
      */
     public boolean estPleine() {
         // a completer
-        return false;
+        return stk.size() == capacite;
     }
 
     /**
@@ -69,13 +83,26 @@ public class Pile2 implements PileI {
      * @return une representation en String d'une pile
      */
     public String toString() {
-        String s = "[";
-        // a completer
-        return s + "]";
+        String s = "]";
+        Iterator<Object> it = stk.iterator();
+        while (it.hasNext()) {
+            s = it.next().toString() + s; 
+            if (it.hasNext()) {
+                s = ", " + s;
+            }
+        }
+        return "[" + s;
     }
 
     public boolean equals(Object o) {
         // a completer
+        if ((o != null) && (o.getClass().equals(this.getClass()))) {
+            Pile2 autrePile = (Pile2)o;
+            return autrePile.taille() == this.taille()
+                    && autrePile.capacite() == this.capacite()
+                    && autrePile.stk.equals(this.stk);
+        }
+        
         return false;
     }
 
@@ -91,7 +118,7 @@ public class Pile2 implements PileI {
      */
     public int taille() {
         // a completer
-        return 0;
+        return stk.size();
     }
 
     /**
@@ -101,7 +128,7 @@ public class Pile2 implements PileI {
      */
     public int capacite() {
         // a completer
-        return 0;
+        return capacite;
     }
 
 } // Pile2.java
