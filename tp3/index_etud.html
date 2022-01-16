@@ -56,58 +56,64 @@
         <tr>
             <td>Nom
             </td>
-            <td>...
+            <td>Makhoul
             </td>
         </tr>
         <tr>
             <td>Prénom
             </td>
-            <td>...
+            <td>Johnny
             </td>
         </tr>
         <tr>
             <td>Matricule
             </td>
-            <td>...
+            <td>11404f
             </td>
         </tr>
     </table>
 		
 	<br />
     <hr />
-    <h3>Question 1.1</h3>
-    Votre réponse...
-
-    <br />
-    <hr />
-    <h3>Question 1.2</h3>
-    Votre réponse...
-
-    <br />
-    <hr />
-    <h3>Question 2.1</h3>
-    Votre réponse...
-
-    <br />
-    <hr />
-    <h3>Question 2.2</h3>
-    Votre réponse...
-
-    <br />
-    <hr />
-    <h3>Question 2.3</h3>
-    Votre réponse...
-
-    <br />
-    <hr />
-    <h3>Question 2.4</h3>
-    Votre réponse...
-
-    <br />
-    <hr />
     <h3>Question 2.5</h3>
-    Votre réponse...
-
+	<code>
+		<font color="#ffffff">&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>boolean&nbsp;</b></font><font color="#000000">equals</font><font color="#000000">(</font><font color="#000000">Object&nbsp;o</font><font color="#000000">)&nbsp;{</font>
+		<br>
+		<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">o&nbsp;</font><font color="#7f0055"><b>instanceof&nbsp;</b></font><font color="#000000">PileI</font><font color="#000000">)&nbsp;{</font>
+		<br>
+		<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">PileI&nbsp;p&nbsp;=&nbsp;</font><font color="#000000">(</font><font color="#000000">PileI</font><font color="#000000">)&nbsp;</font><font color="#000000">o;</font>
+		<br>
+		<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;this</b></font><font color="#000000">.capacite</font><font color="#000000">()&nbsp;</font><font color="#000000">==&nbsp;p.capacite</font><font color="#000000">()</font>
+		<br>
+		<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">&amp;&amp;&nbsp;</font><font color="#7f0055"><b>this</b></font><font color="#000000">.hashCode</font><font color="#000000">()&nbsp;</font><font color="#000000">==&nbsp;p.hashCode</font><font color="#000000">()</font><font color="#000000">;</font>
+		<br>
+		<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}&nbsp;</font><font color="#7f0055"><b>else</b></font>
+		<br>
+		<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;false</b></font><font color="#000000">;</font>
+		<br>
+		<font color="#ffffff">&nbsp;&nbsp;</font><font color="#000000">}</font>
+	</code>
+	<br/><br/>
+    <strong>Reponse: La 1ere implementation de equals est correcte, car elle verifie le type actuel de l'instance o et de l'egalité de la capacité et de la valeur retournée par hashCode() de l'instance avec ceux de l'objet actuel.
+	<br>p.hashCode() et this.hashCode() retournent la meme valeur si les 2 objets ont les memes état que hashCode() utilise pour calculer sa valeur de retour.</strong>
+	<br/><br/>
+	<code>
+		<font color="#7f0055"><b>public&nbsp;boolean&nbsp;</b></font><font color="#000000">equals(Object&nbsp;o)&nbsp;{</font>
+		<br>
+		<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font>return 
+		this.toString().equals(o.toString());
+		<br>
+		<font color="#ffffff">&nbsp;&nbsp;</font><font color="#000000">}</font>
+	</code>
+	<br/>
+	<strong>
+	Reponse: ce code n'est pas correcte car:
+	<ol>
+		<li>La vérification du type de o n'est pas presente.</li>
+		<li>2 piles de capacités differentes peuvent avoir le meme nombre d'élements et les memes valeurs</li>
+		<li>Cas de o == null (NullPointerException)</li>
+	</ol>
+	</strong>
     <br />
     <hr />
     <h3>Question 3.1</h3>

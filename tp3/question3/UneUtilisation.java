@@ -20,10 +20,10 @@ public class UneUtilisation {
         System.out.println(" la pile p2 = " + p2);
 
         try {
-            // p1.empiler(new PolygoneRegulier(5,100)); // désormais une erreur de
+            //p1.empiler(new PolygoneRegulier(5,100)); // désormais une erreur de
             // compilation
             // ....
-            // String s = (String)p1.depiler(); // désormais une erreur de
+            //String s = (String)p1.depiler(); // désormais une erreur de
             // compilation
         } catch (Exception e) {
             e.printStackTrace();
