@@ -70,7 +70,8 @@ public class Pile implements PileI {
         // a completer
         return ptr == zone.length;
     }
-
+    
+    /*
     public boolean equals(Object o) {
         // a completer
         if ((o != null) && (o.getClass().equals(this.getClass()))) {
@@ -80,6 +81,21 @@ public class Pile implements PileI {
                     && Arrays.equals(autrePile.zone, this.zone);
         }
         
+        return false;
+    }
+    */
+    
+    // implementation de equals de la question 2.5
+    public boolean equals(Object o) {
+        // a completer
+        if (o == this)
+            return true;
+        if ((o != null) && (o instanceof PileI)) {
+            PileI autrePile = (PileI)o;
+            return autrePile.taille() == this.taille()
+                    && autrePile.capacite() == this.capacite()
+                    && autrePile.hashCode() == this.hashCode();
+        }
         return false;
     }
 

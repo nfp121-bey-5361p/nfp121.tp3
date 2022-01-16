@@ -7,6 +7,7 @@ comment10.params=
 comment10.target=java.lang.String\ toString()
 comment11.params=o
 comment11.target=boolean\ equals(java.lang.Object)
+comment11.text=public\ boolean\ equals(Object\ o)\ {\r\n\ \ \ \ \ \ \ \ //\ \u00C3\u00A0\ compl\u00C3\u00A9ter\r\n\ \ \ \ \ \ \ \ if\ ((o\ \!\=\ null)\ &&\ (o.getClass().equals(this.getClass())))\ {\r\n\ \ \ \ \ \ \ \ \ \ \ \ Pile3\ autrePile\ \=\ (Pile3)o;\r\n\ \ \ \ \ \ \ \ \ \ \ \ return\ autrePile.taille()\ \=\=\ this.taille()\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ &&\ autrePile.capacite()\ \=\=\ this.capacite()\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ &&\ autrePile.v.equals(this.v);\r\n\ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ \ return\ false;\r\n}
 comment12.params=
 comment12.target=int\ hashCode()
 comment2.params=taille

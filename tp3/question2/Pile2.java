@@ -94,7 +94,7 @@ public class Pile2 implements PileI {
         return "[" + s;
     }
 
-    public boolean equals(Object o) {
+    /*public boolean equals(Object o) {
         // a completer
         if ((o != null) && (o.getClass().equals(this.getClass()))) {
             Pile2 autrePile = (Pile2)o;
@@ -103,6 +103,20 @@ public class Pile2 implements PileI {
                     && autrePile.stk.equals(this.stk);
         }
         
+        return false;
+    }*/
+    
+    // implementation de equals de la question 2.5
+    public boolean equals(Object o) {
+        // a completer
+        if (o == this)
+            return true;
+        if ((o != null) && (o instanceof PileI)) {
+            PileI autrePile = (PileI)o;
+            return autrePile.taille() == this.taille()
+                    && autrePile.capacite() == this.capacite()
+                    && autrePile.hashCode() == this.hashCode();
+        }
         return false;
     }
 

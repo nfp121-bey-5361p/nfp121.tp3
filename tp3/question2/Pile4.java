@@ -145,12 +145,26 @@ public class Pile4 implements PileI, Cloneable {
         return s + "]";
     }
 
-    public boolean equals(Object o) {
+    /*public boolean equals(Object o) {
         if (o != null && o instanceof Pile4) {
             Pile4 autrePile = (Pile4)o; 
             return autrePile.taille() == this.taille()
                     && autrePile.capacite() == this.capacite()
                     && autrePile.toString().equals(this.toString());
+        }
+        return false;
+    }*/
+    
+    // implementation de equals de la question 2.5
+    public boolean equals(Object o) {
+        // a completer
+        if (o == this)
+            return true;
+        if ((o != null) && (o instanceof PileI)) {
+            PileI autrePile = (PileI)o;
+            return autrePile.taille() == this.taille()
+                    && autrePile.capacite() == this.capacite()
+                    && autrePile.hashCode() == this.hashCode();
         }
         return false;
     }

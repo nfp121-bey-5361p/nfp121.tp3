@@ -30,4 +30,5 @@ comment8.target=java.lang.String\ toString()
 comment8.text=\r\n\ Retourne\ une\ representation\ en\ String\ d'une\ pile,\ contenant\ la\r\n\ representation\ en\ String\ de\ chaque\ element.\r\n\ \r\n\ @return\ une\ representation\ en\ String\ d'une\ pile\r\n
 comment9.params=o
 comment9.target=boolean\ equals(java.lang.Object)
+comment9.text=public\ boolean\ equals(Object\ o)\ {\r\n\ \ \ \ \ \ \ \ //\ a\ completer\r\n\ \ \ \ \ \ \ \ if\ ((o\ \!\=\ null)\ &&\ (o.getClass().equals(this.getClass())))\ {\r\n\ \ \ \ \ \ \ \ \ \ \ \ Pile2\ autrePile\ \=\ (Pile2)o;\r\n\ \ \ \ \ \ \ \ \ \ \ \ return\ autrePile.taille()\ \=\=\ this.taille()\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ &&\ autrePile.capacite()\ \=\=\ this.capacite()\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ &&\ autrePile.stk.equals(this.stk);\r\n\ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ \ return\ false;\r\n}
 numComments=13

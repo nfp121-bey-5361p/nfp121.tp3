@@ -5,6 +5,7 @@ comment1.params=taille
 comment1.target=Pile(int)
 comment10.params=o
 comment10.target=boolean\ equals(java.lang.Object)
+comment10.text=\r\n\ \ \ \ public\ boolean\ equals(Object\ o)\ {\r\n\ \ \ \ \ \ \ \ //\ a\ completer\r\n\ \ \ \ \ \ \ \ if\ ((o\ \!\=\ null)\ &&\ (o.getClass().equals(this.getClass())))\ {\r\n\ \ \ \ \ \ \ \ \ \ \ \ Pile\ autrePile\ \=\ (Pile)o;\r\n\ \ \ \ \ \ \ \ \ \ \ \ return\ autrePile.taille()\ \=\=\ this.taille()\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ &&\ autrePile.capacite()\ \=\=\ this.capacite()\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ &&\ Arrays.equals(autrePile.zone,\ this.zone);\r\n\ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ \ return\ false;\r\n\ \ \ \ }\r\n
 comment11.params=
 comment11.target=int\ hashCode()
 comment12.params=
